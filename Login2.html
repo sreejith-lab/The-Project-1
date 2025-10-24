@@ -58,21 +58,28 @@
         </div>
     </aside>
     <div class="login-main">
-    <form class="login">
-        <div>
-            <h1>
-                SIGN IN
-            </h1>
-            <h2>
-                Sign in to manage your events
-            </h2>
-        </div>
-        <input type="email" placeholder="you@123example.com" required>
-        <input type="password" placeholder="Enter your Password" required>
-        <!-- <textarea rows="5" placeholder="Your Message"></textarea>   -->
-        <button class="cta-button" type="submit">Submit</button>
-        <button class="cta-button" type="reset">Reset</button>
-    </form>
+        <form method="get" action="./error.html" class="login">
+            <div>
+                <h1>
+                    SIGN IN
+                </h1>
+                <h2>
+                    Sign in to manage your events
+                </h2>
+            </div>
+            <input type="email" placeholder="you@123example.com" required>
+            <input type="password" placeholder="Enter your Password" required>
+            <!-- <textarea rows="5" placeholder="Your Message"></textarea>   -->
+            <div class="flex1" style="display: inline-block;" >
+                <button class="cta-button" type="submit">Login</button>
+                <button class="cta-button" type="reset">Reset</button>
+
+                <div class="flex-content" style="display: flex; align-items: center; gap: 10px; margin: 10px;">
+                    <p>Don't have account? Create Now</p>
+                    <a style="color:rgb(2, 160, 2); text-decoration: none;" href="./createaccount2.html">Create Account</a>
+                </div>
+            </div>
+        </form>
     </div>
     <script src="./script.js"></script>
     <script src="./script2.js"></script>

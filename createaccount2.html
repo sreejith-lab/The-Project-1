@@ -5,20 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electric Battery Industry</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <style>
-            .flex1{
-                display: flex;
-                flex-direction: column;
-                justify-items: center;
-                gap: 20px;
-                margin-top: 20px;
-            }
-        </style>
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,22 +26,22 @@
                 <img class="logo" src="Assests/Stackly-blue-removebg-preview.png" alt="">
             </a>
             <ul class="nav-links">
-                <li class="dropdown"><a href="index.html" class="nav-link">Home <i
+                <li class="dropdown"><a href="index2.html" class="nav-link">Home <i
                             class="fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="index2.html">Home Page 2</a>
+                            <a href="index.html">Home Page 1</a>
                         </li>
                     </ul>
                 </li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="addtocart.html" class="cta-button">Shop Now</a></li>
+                <li><a href="about2.html" class="nav-link">About</a></li>
+                <li><a href="service2.html" class="nav-link">Services</a></li>
+                <li><a href="blog2.html" class="nav-link">Blog</a></li>
+                <li><a href="contact2.html" class="nav-link">Contact</a></li>
+                <li><a href="shop2.html" class="cta-button">Shop Now</a></li>
             </ul>
             <i class="fa-solid fa-bars" id="menu"></i>
-            <a href="login.html" class="anchor"><i class="fa-regular fa-circle-user" id="user">
+            <a href="Login2.html" class="anchor"><i class="fa-regular fa-circle-user" id="user">
                     <p class="user-para">Login In</p>
                 </i></a>
         </nav>
@@ -60,13 +58,13 @@
                 </ul>
             </div>
 
-            <a href="about.html" class="nav-link active">About</a>
-            <a href="services.html" class="nav-link">Services</a>
-            <a href="blog.html" class="nav-link">Blog</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="addtocart.html" class="cta-button">Shop Now</a>
+            <a href="about2.html" class="nav-link active">About</a>
+            <a href="service2.html" class="nav-link">Services</a>
+            <a href="blog2.html" class="nav-link">Blog</a>
+            <a href="contact2.html" class="nav-link">Contact</a>
+            <a href="shop2.html" class="cta-button">Shop Now</a>
 
-            <a href="login.html" class="anchor1"><i class="fa-regular fa-circle-user" id="user">
+            <a href="Login2.html" class="anchor1"><i class="fa-regular fa-circle-user" id="user">
                     <p class="user-para">Login In</p>
                 </i></a>
         </div>
@@ -75,23 +73,24 @@
         <form method="get" action="./error.html" class="login">
             <div>
                 <h1>
-                    SIGN IN
+                    SIGN UP
                 </h1>
                 <h2>
-                    Sign in to manage your events
+                    Create Account to manage your events
                 </h2>
             </div>
+            <input type="name" placeholder="Eg Jerry" required>
             <input type="email" placeholder="you@123example.com" required>
             <input type="password" placeholder="Enter your Password" required>
+            <input type="password" placeholder="Enter your Password" required>
             <!-- <textarea rows="5" placeholder="Your Message"></textarea>   -->
-            <div class="flex1" style="display: inline-block;" >
-                <button class="cta-button" type="submit">Login</button>
-                <button class="cta-button" type="reset">Reset</button>
-
-                <div class="flex-content" style="display: flex; align-items: center; gap: 10px; margin: 10px;">
-                    <p>Don't have account? Create Now</p>
-                    <a style="color: palegreen; text-decoration: none;" href="./createaccount.html">Create Account</a>
-                </div>
+            <button class="cta-button" type="submit">Sign Up</button>
+            <button class="cta-button" type="reset">Reset</button>
+            <div class="flex" style="margin-top: 10px;">
+                <p>Already have an account? login in here</p>
+                <a href="./Login2.html" style="margin-left: 15px; color: palegreen;">
+                    Login Now
+                </a>
             </div>
         </form>
     </div>

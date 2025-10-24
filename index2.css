@@ -149,7 +149,7 @@ nav a {
     transition: all 0.3s ease;
     animation: fadeInUp 1s ease 0.4s;
     animation-fill-mode: both;
-    box-shadow: 0 10px 30px var(--dark);
+    box-shadow: 0 10px 30px var(--secondary);
     /* subtle teal glow */
 }
 

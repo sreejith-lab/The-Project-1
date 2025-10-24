@@ -1,0 +1,818 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ===== Core Theme Colors ===== */
+    --primary: #286527;
+    /* Deep green – main background */
+    --secondary: #92c48d;
+    /* Soft green – section backgrounds */
+    --accent: #3db741;
+    /* Bright green – buttons, highlights */
+    --light: #e6f7e6;
+    /* Light green-white – text on dark backgrounds */
+    --dark: #1a3a1a;
+    /* Near-black green – footer or text contrast */
+
+    /* ===== Text Colors ===== */
+    --text-primary: #ffffff;
+    /* Main text color */
+    --text-secondary: #cce5cc;
+    /* Muted text for paragraphs/subheadings */
+    --text-accent: #a3e39f;
+    /* Accent text for hover or emphasis */
+
+    /* ===== Background Colors ===== */
+    --bg-main: var(--primary);
+    --bg-section: var(--secondary);
+    --bg-light: var(--light);
+    --bg-dark: var(--dark);
+
+    /* ===== Gradients ===== */
+    --gradient-1: linear-gradient(135deg, #286527 0%, #92c48d 50%, #3db741 100%);
+    --gradient-2: linear-gradient(90deg, #1a3a1a 0%, #286527 40%, #3db741 100%);
+    --gradient-glow: linear-gradient(180deg, #3db741 0%, #92c48d 70%, #1a3a1a 100%);
+}
+
+body {
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    background: var(--light);
+    overflow-x: hidden;
+}
+
+
+.Header {
+    background: var(--accent);
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    color: #e6f7f5;
+    /* overflow: hidden; */
+}
+.logo {
+    width: 350px;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6f7f5;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    background: var(--primary);
+    border-color: var(--secondary);
+    transition: 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #f2f9f8;
+    background: var(--gradient-1);
+    border-color: var(--gradient-glow);
+}
+#menu {
+    background-color: (5, 37, 37, 0.85);
+    display: none;
+    font-size: 32px;
+    fill: #e6f7f5;
+    padding-right: 40px;
+}
+
+#user {
+    width: 120px;
+    font-size: x-large;
+    display: flex;
+    color: #e6f0ff;
+}
+
+.anchor {
+    text-decoration: none;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+.Header ul li {
+    padding: 10px 20px;
+    position: relative;
+    list-style: none;
+}
+
+/*-------------------------------------------------*/
+/* Dropdown Container */
+.mobile-dropdown {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    position: relative;
+}
+
+.dropdown-toggle:hover {
+    color: #fff;
+}
+
+/* Caret rotation animation */
+.dropdown-toggle i {
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Toggle (the "Home" link) */
+/* .dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #e6f7f5;
+  text-decoration: none;
+  font-size: x-large;
+  transition: color 0.3s ease;
+} */
+
+
+
+/* Toggle/
+/* Dropdown links */
+/* .dropdown-menu a {
+  color: #dff;
+  font-size: large;
+  padding: 10px;
+} */
+
+/* Active state (visible dropdown) */
+/* .mobile-dropdown.active .dropdown-menu {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+} */
+/* Rotate caret when open */
+/* .mobile-dropdown.active .dropdown-toggle i {
+  transform: rotate(90deg);
+} */
+.cta-button {
+    display: inline-block;
+    padding: 20px 15px;
+    background: var(--primary);
+    color: #f2f9f8;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease 0.4s;
+    animation-fill-mode: both;
+    box-shadow: 0 10px 30px var(--secondary);
+    /* subtle teal glow */
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: var(--accent);
+    /* darker accent teal */
+    box-shadow: 0 15px 40px var(--dark);
+    /* teal glow */
+    color: #f2f9f8;
+    /* ensure text stays readable */
+    transition: all 0.3s ease;
+}
+
+aside>.menu-nav {
+    display: none;
+}
+
+.aside1>.menu-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*-///////////----------------------------------------------///////*/
+.mobileMenu {
+    display: flex;
+    justify-content: end;
+}
+.menu-nav a {
+    text-decoration: none;
+    color: #e6f7f5;
+    font-size: x-large;
+}
+.menu-nav {
+    margin-top: 80px;
+    width: 50%;
+    padding: 30px;
+    border-radius: 30px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--accent);
+}
+/* Mobile Click / Active State (optional JS toggle) */
+.mobile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown menu hidden by default */
+/* Dropdown Menu */
+.dropdown-menu {
+    /* height: 250px; */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary);
+    min-width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    /* display: flex; */
+    gap: 10px;
+    text-align: center;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+
+.dropdown-menu li a {
+    padding: 8px 12px;
+    /* display: block; */
+    color: #fff;
+       /* position: relative; */
+
+
+}
+.dropdown-menu>li{
+ /* position: absolute; */
+ padding: 12px 8px;
+
+    
+}
+/* .dropdown-menu li a:hover{
+    background-color: red;
+} */
+
+.dropdown-menu li a:hover {
+    background: var(--primary);
+}
+
+/* Desktop Hover */
+/* Desktop Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+/* Mobile Menu */
+#menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------*/
+
+.menu-nav {
+    margin-top: 80px;
+    width: 50%;
+    padding: 30px;
+    border-radius: 30px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--accent);
+
+}
+
+.mobileMenu {
+    display: flex;
+    justify-content: end;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #e6f7f5;
+    font-size: x-large;
+}
+
+.user-para {
+    font-size: large;
+    padding: 5px;
+    color: #e6f7f5;
+    margin: auto;
+}
+
+/***********************************************************/
+.login-main {
+    margin-top: 120px;
+}
+
+.login h1,
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.login {
+    max-width: 600px;
+    height: 500px;
+    margin: 50px auto;
+    background: var(--secondary);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login input,
+.login textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background: var(--light);
+    color: var(--dark);
+}
+
+.login button {
+    width: 120px;
+    background: var(--accent);
+    color: var(--light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.login button:hover {
+    background: var(--secondary);
+}
+
+.contact-section {
+	background: var(--gradient-1);
+	color: var(--light);
+	padding: 60px 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.contact-section h2 {
+	font-size: 2.5rem;
+	color: var(--primary);
+	margin-bottom: 20px;
+}
+
+.contact-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+	margin-top: 30px;
+}
+
+.contact-card {
+	background: var(--light);
+	color: var(--dark);
+	border-radius: 12px;
+	padding: 30px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	width: 320px;
+	transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+	transform: translateY(-5px);
+	background: var(--gradient-2);
+	color: var(--light);
+}
+
+.contact-form {
+	max-width: 600px;
+	margin: 50px auto;
+	background: var(--secondary);
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 12px;
+	margin: 10px 0;
+	border: none;
+	border-radius: 6px;
+	background: var(--light);
+	color: var(--dark);
+}
+
+.contact-form button {
+	background: var(--accent);
+	color: var(--light);
+	border: none;
+	padding: 12px 25px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.contact-form button:hover {
+	background: var(--secondary);
+}
+/******************************************************************************/
+footer {
+    height: 100%;
+    text-align: center;
+    color: var(--light);
+    opacity: 0.8;
+}
+
+.footer-parent {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background: rgba(5, 37, 37, 0.85);
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.set1 {
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.logo1 {
+    height: 60px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.set2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-header {
+    color: var(--accent);
+
+}
+
+.footer-li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.footer-li a {
+    margin-top: 5px;
+    text-decoration: none;
+    color: #f2f9f8;
+    padding: 5px;
+}
+
+.footer-li a:hover {
+    color: #2fa39a;
+}
+
+.set3 {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-para {
+    color: #f2f9f8;
+}
+
+.set4 {
+    padding: 20px;
+    text-align: center;
+}
+
+.set4 .footer-para {
+    color: #f2f9f8;
+    line-height: 2;
+}
+
+.svg {
+    margin-top: 5px;
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+    fill: #f2f9f8;
+}
+
+.svg:hover {
+    fill: var(--accent);
+}
+
+/* ------MEDIA QUERY-------*/
+
+
+/* Laptop  L */
+
+@media screen and (max-width:1441px) {
+    #menu {
+        display: none;
+    }
+    .contact-section  h2{
+        margin-top: 55px;
+    }
+    .logo {
+        width: 280px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 24px;
+    }
+    .nav-links>li>a {
+        font-size: 14px;
+    }
+.contact-card {
+        width: 600px;
+        font-size: 20px;
+        text-align: center;
+        padding: 40px 0px;
+    }
+    .set1 {
+        margin-top: 12px;
+    }
+    .footer-header {
+        font-size: 26px;    
+    }
+    .footer-li {
+        font-size: 22px;
+    }
+    .footer-para {
+        font-size: 22px;
+    }
+}
+
+/* Laptop nrml */
+@media screen and (max-width:1025px) {
+    #menu {
+        display: block;
+        margin-left: auto;
+    }
+    h3 {
+        font-size: 22px;
+    }
+    p{
+    font-size: 20px ;
+    }
+    .nav-links {
+        display: none;
+    }
+    .contact-section h2 {
+        font-size: 32px;
+    }
+    .anchor {
+        display: none;
+    }
+    .contact-card {
+        width: 450px;
+        padding: 30px 0px;
+    }
+}
+
+@media screen and (max-width:1025px) {
+    
+    .Logo {
+        width: 150px;
+        margin-top: 10px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .nav-links>li>a {
+        font-size: 10px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .footer-parent {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .footer-header {
+        font-size: 24px;
+    }
+    .footer-li {
+        font-size: 20px;
+    }
+    .footer-para {
+        font-size: 20px;
+    }
+}
+
+/* Tablet */
+
+@media screen and (max-width:769px) {
+    .nav-links {
+        display: none;
+    }
+    .anchor {
+        display: none;
+    }
+     .contact-section h2 {
+        font-size: 30px;
+    }
+    #menu {
+        display: block;
+    }
+    
+    .footer-header {
+        margin-top: 10px;
+    }
+
+    .footer-parent {
+        grid-template-columns: auto auto;
+        padding: 30px;
+    }
+
+    .footer-li {
+        font-size: 16px;
+    }
+    .footer-para {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:790px) {
+    .menu-nav {
+        width: 70%;
+        font-size: 14px;
+    }
+    .menu-nav > a > .nav-links , .user-para{
+        font-size: 14px; 
+    }
+}
+
+/* Mobile L*/
+
+@media screen and (max-width:426px) {
+    .mobile-dropdown .dropdown-menu li a {
+    font-size: 12px;
+}
+.mobile-dropdown .dropdown-menu li a {
+    font-size: 12px;
+}
+    .footer-header {
+        margin-top: 10px;
+    }
+     .contact-section h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .footer-parent {
+        grid-template-columns: auto;
+        padding: 10px;
+    }
+    .contact-card {
+        margin: 30px;
+    }
+    .footer-li {
+        font-size: 16px;
+    }
+    .contact-form {
+        width: 350px;
+        margin: auto;
+    }
+}
+
+/* Mobile M */
+
+@media screen and (max-width:376px) {
+   
+    .footer-header {
+        margin-top: 10px;
+    }
+
+    .footer-parent {
+        grid-template-columns: auto;
+        padding: 0px;
+    }
+       .contact-section h2 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .footer-li {
+        font-size: 14px;
+    }
+
+    .set1 {
+        padding: 0px;
+    }
+    .footer-para {
+        font-size: 14px;
+         padding: 5px;
+    } 
+     .contact-form {
+        width: 320px;
+        margin: auto;
+    }
+}
+
+/* Mobile S*/
+
+@media screen and (max-width:321px) {
+
+    .logo {
+        width: 200px;
+    }
+    .Logo {
+        width: 300px;
+    }
+       .contact-section h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .footer-parent {
+        padding: 0px;
+    }
+
+    .footer-header {
+        margin: 0px;
+        font-size: 20px;
+    }
+     .contact-form {
+        width: 280px;
+        margin: auto;
+    }
+    .set1,
+    .set2,
+    .set3,
+    .set4 {
+        padding: 10px;
+    }
+    .footer-li {
+        font-size: 14px;
+    }
+
+    .set1 {
+        padding: 0px;
+    }
+    .footer-para {
+        font-size: 14px;
+        padding: 5px;
+    }
+}

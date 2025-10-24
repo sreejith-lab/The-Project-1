@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ===== Core Theme Colors ===== */
+    --primary: #286527;
+    /* Deep green – main background */
+    --secondary: #92c48d;
+    /* Soft green – section backgrounds */
+    --accent: #3db741;
+    /* Bright green – buttons, highlights */
+    --light: #e6f7e6;
+    /* Light green-white – text on dark backgrounds */
+    --dark: #1a3a1a;
+    /* Near-black green – footer or text contrast */
+
+    /* ===== Text Colors ===== */
+    --text-primary: #ffffff;
+    /* Main text color */
+    --text-secondary: #cce5cc;
+    /* Muted text for paragraphs/subheadings */
+    --text-accent: #a3e39f;
+    /* Accent text for hover or emphasis */
+
+    /* ===== Background Colors ===== */
+    --bg-main: var(--primary);
+    --bg-section: var(--secondary);
+    --bg-light: var(--light);
+    --bg-dark: var(--dark);
+
+    /* ===== Gradients ===== */
+    --gradient-1: linear-gradient(135deg, #286527 0%, #92c48d 50%, #3db741 100%);
+    --gradient-2: linear-gradient(90deg, #1a3a1a 0%, #286527 40%, #3db741 100%);
+    --gradient-glow: linear-gradient(180deg, #3db741 0%, #92c48d 70%, #1a3a1a 100%);
+}
+
+body {
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    background: var(--light);
+    overflow-x: hidden;
+}
+
+
+.Header {
+    background: var(--accent);
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    color: #e6f7f5;
+    /* overflow: hidden; */
+}
+
+.logo {
+    width: 350px;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6f7f5;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    background: var(--primary);
+    border-color: var(--secondary);
+    transition: 0.3s ease;
+}
+
+.nav-links a.active {
+    color: #f2f9f8;
+    background: var(--gradient-1);
+    border-color: var(--gradient-glow);
+}
+
+#menu {
+    background-color: (5, 37, 37, 0.85);
+    display: none;
+    font-size: 32px;
+    fill: #e6f7f5;
+    padding-right: 40px;
+}
+
+#user {
+    width: 120px;
+    font-size: x-large;
+    display: flex;
+    color: #e6f0ff;
+}
+
+.anchor {
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+}
+
+.Header ul li {
+    padding: 10px 20px;
+    position: relative;
+    list-style: none;
+}
+
+/*-------------------------------------------------*/
+/* Dropdown Container */
+.mobile-dropdown {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    position: relative;
+}
+
+.dropdown-toggle:hover {
+    color: #fff;
+}
+
+/* Caret rotation animation */
+.dropdown-toggle i {
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Toggle (the "Home" link) */
+/* .dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #e6f7f5;
+  text-decoration: none;
+  font-size: x-large;
+  transition: color 0.3s ease;
+} */
+
+
+
+/* Toggle/
+/* Dropdown links */
+/* .dropdown-menu a {
+  color: #dff;
+  font-size: large;
+  padding: 10px;
+} */
+
+/* Active state (visible dropdown) */
+/* .mobile-dropdown.active .dropdown-menu {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+} */
+/* Rotate caret when open */
+/* .mobile-dropdown.active .dropdown-toggle i {
+  transform: rotate(90deg);
+} */
+.cta-button {
+    display: inline-block;
+    padding: 20px 15px;
+    background: var(--primary);
+    color: #f2f9f8;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease 0.4s;
+    animation-fill-mode: both;
+    box-shadow: 0 10px 30px var(--secondary);
+    /* subtle teal glow */
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background: var(--accent);
+    /* darker accent teal */
+    box-shadow: 0 15px 40px var(--dark);
+    /* teal glow */
+    color: #f2f9f8;
+    /* ensure text stays readable */
+    transition: all 0.3s ease;
+}
+
+aside>.menu-nav {
+    display: none;
+}
+
+.aside1>.menu-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/*-///////////----------------------------------------------///////*/
+.mobileMenu {
+    display: flex;
+    justify-content: end;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #e6f7f5;
+    font-size: x-large;
+}
+
+.menu-nav {
+    margin-top: 80px;
+    width: 50%;
+    padding: 30px;
+    border-radius: 30px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--accent);
+}
+
+/* Mobile Click / Active State (optional JS toggle) */
+.mobile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown menu hidden by default */
+/* Dropdown Menu */
+.dropdown-menu {
+    /* height: 250px; */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary);
+    min-width: 200px;
+    border-radius: 5px;
+    text-align: center;
+    /* display: flex; */
+    gap: 10px;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+
+.dropdown-menu li a {
+    padding: 8px 12px;
+    /* display: block; */
+    color: #fff;
+    /* position: relative; */
+
+
+}
+
+.dropdown-menu>li {
+    /* position: absolute; */
+    padding: 12px 8px;
+
+
+}
+
+/* .dropdown-menu li a:hover{
+    background-color: red;
+} */
+
+.dropdown-menu li a:hover {
+    background: var(--primary);
+}
+
+/* Desktop Hover */
+/* Desktop Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+/* Mobile Menu */
+#menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------*/
+
+.menu-nav {
+    margin-top: 80px;
+    width: 50%;
+    padding: 30px;
+    border-radius: 30px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--accent);
+
+}
+
+.mobileMenu {
+    display: flex;
+    justify-content: end;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #e6f7f5;
+    font-size: x-large;
+}
+
+.user-para {
+    font-size: large;
+    padding: 5px;
+    color: #e6f7f5;
+    margin: auto;
+}
+
+/***********************************************************/
+.login-main {
+    margin-top: 120px;
+}
+
+.login h1,
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.login {
+    max-width: 600px;
+    height: 500px;
+    margin: 50px auto;
+    background: var(--secondary);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login input,
+.login textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background: var(--light);
+    color: var(--dark);
+}
+
+.login button {
+    width: 120px;
+    background: var(--accent);
+    color: var(--light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.login button:hover {
+    background: var(--secondary);
+}
+
+@media screen and (max-width:1441px) {
+    #menu {
+        display: none;
+    }
+
+    .logo {
+        width: 280px;
+    }
+
+    .nav-links>li>a {
+        font-size: 14px;
+    }
+}
+
+/* Laptop nrml */
+@media screen and (max-width:1025px) {
+    #menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .anchor {
+        display: none;
+    }
+}
+
+@media screen and (max-width:790px) {
+    .menu-nav {
+        width: 65%;
+        font-size: 14px;
+    }
+
+    .menu-nav>a>.nav-links,
+    .user-para {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:426px) {
+    .login-main {
+        padding: 20px;
+        margin-top: 50px;
+    }
+    .mobile-dropdown .dropdown-menu li a {
+    font-size: 12px;
+}
+    h1 {
+        font-size: x-large;
+    }
+
+    h2 {
+        font-size: larger;
+    }
+
+    .login {
+        height: 420px;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .login {
+        text-align: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .login .cta-button {
+        margin: 5px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+}

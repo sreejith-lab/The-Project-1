@@ -10,15 +10,13 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <style>
-            .flex1{
-                display: flex;
-                flex-direction: column;
-                justify-items: center;
-                gap: 20px;
-                margin-top: 20px;
-            }
-        </style>
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,32 +70,37 @@
         </div>
     </aside>
     <div class="login-main">
-        <form method="get" action="./error.html" class="login">
+        <form class="login">
             <div>
                 <h1>
-                    SIGN IN
+                    SIGN UP
                 </h1>
                 <h2>
-                    Sign in to manage your events
+                    Create Account to manage your events
                 </h2>
             </div>
+            <input type="name" placeholder="Eg Jerry" required>
             <input type="email" placeholder="you@123example.com" required>
             <input type="password" placeholder="Enter your Password" required>
+            <input type="password" placeholder="Enter your Password" required>
             <!-- <textarea rows="5" placeholder="Your Message"></textarea>   -->
-            <div class="flex1" style="display: inline-block;" >
-                <button class="cta-button" type="submit">Login</button>
-                <button class="cta-button" type="reset">reset</button>
+            <button class="cta-button" type="submit">Sign Up</button>
+            <button class="cta-button" type="reset">Reset</button>
 
-                <div style="display: flex; align-items: center; gap: 10px; margin: 10px;">
-                    <p>Don't have account? Create Now</p>
-                    <a style="color: palegreen;" href="./createaccount.html">Create Account</a>
-                </div>
+
+            <div class="flex" style="margin-top: 10px;">
+                <p>Already have an account? login in here</p>
+                <a href="./login.html" style="margin-left: 15px; color: palegreen;">
+                    Login Now
+                </a>
             </div>
-
         </form>
-
-
     </div>
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
+    <script src="./script10.js"></script>
+    <script src="./script11.js"></script>
+    <script src="./script12.js"></script>
 </body>
 
 </html>

@@ -588,6 +588,9 @@ footer {
         display: block;
         margin-left: auto;
     }
+            .mobile-dropdown .dropdown-menu li a {
+    font-size: 12px;
+}
     h3 {
         font-size: 22px;
     }

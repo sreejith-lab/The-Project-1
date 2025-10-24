@@ -422,6 +422,9 @@ h2 {
     .anchor {
         display: none;
     }
+            .mobile-dropdown .dropdown-menu li a {
+    font-size: 12px;
+}
 }
 
 @media screen and (max-width:790px) {
@@ -470,5 +473,9 @@ h2 {
 
     .logo {
         width: 200px;
+    }
+    .cta-button {
+        padding: 10px;
+        font-size: 18px;
     }
 }

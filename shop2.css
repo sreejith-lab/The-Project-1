@@ -609,6 +609,9 @@ footer {
     #menu {
         display: block;
     }
+            .mobile-dropdown .dropdown-menu li a {
+    font-size: 12px;
+}
 
     .nav-links {
         display: none;
@@ -823,5 +826,9 @@ footer {
     }
     .logo1 {
         width: 250px;
+    }
+     .cta-button {
+        padding: 10px;
+        font-size: 18px;
     }
 }

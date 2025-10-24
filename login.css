@@ -135,10 +135,8 @@ h2 {
     text-align: center;
     padding: 10px;
 }
-
 .login {
     max-width: 600px;
-    /* height: 500px; */
     margin: 50px auto;
     background: var(--secondary);
     padding: 40px;
